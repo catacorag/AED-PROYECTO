@@ -1,6 +1,5 @@
 
 public class Alumno extends Persona {
-<<<<<<< HEAD
 	
 	public Alumno(String nombre, int edad, char sexo, double d, double e, int codigo2) {
 		super (nombre, edad, sexo, d, e);
