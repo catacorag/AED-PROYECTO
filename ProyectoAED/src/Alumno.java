@@ -1,6 +1,11 @@
 
 public class Alumno extends Persona {
-	private int  codigo;
+	private int codigo;
+
+	public Alumno(int codigo) {
+		super();
+		this.codigo = codigo;
+	}
 
 	public int getCodigo() {
 		return codigo;
