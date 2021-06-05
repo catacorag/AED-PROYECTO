@@ -1,16 +1,10 @@
 
 public class Alumno extends Persona {
-	
+	private int codigo;
 	public Alumno(String nombre, int edad, char sexo, double d, double e, int codigo2) {
 		super (nombre, edad, sexo, d, e);
 		this.codigo = codigo;
 
-	}
-	private int codigo;
-
-	public Alumno(int codigo) {
-		super();
-		this.codigo = codigo;
 	}
 
 	public int getCodigo() {
