@@ -1,10 +1,17 @@
 public class Persona {
     private String nombre;
     private int edad;
-    private float peso;
-    private float altura;
+    private double peso;
+    private double altura;
     private char sexo;
-
+    
+	public Persona(String nombre, int edad, char sexo) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+	}
+    
     public Persona(String nombre,int edad, char sexo, double d, double e) { 
         this.nombre=nombre; 
         this.edad=edad;
@@ -12,8 +19,8 @@ public class Persona {
         this.peso=(float) d;
         this.altura=(float) e;
     }
-    public Persona(Persona objetopersona) {
-        // TODO Auto-generated constructor stub
+    public Persona(Persona p) {
+        this(p.nombre, p.edad, p.sexo, p.peso, p.altura);
     }
     public void setNombre(String nombre) {
         this.nombre=nombre;
@@ -36,7 +43,7 @@ public class Persona {
     public void setAltura(float altura) {
         this.altura=altura;
     }
-    public  float  getAltura() {
+    public  double  getAltura() {
         return this.altura ;
     }
     public void setSexo(char sexo) {
