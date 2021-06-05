@@ -3,25 +3,19 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
+        // TODO Auto-generated method stub
+        ValidacionDatos in = new ValidacionDatos();
 
-		String nombre;
-		char genero;
-		int edad;
-		double peso;
-		double altura;
-		System.out.print("Ingrese su Nombre: ");nombre = sc.nextLine();
-		System.out.print("Ingrese su Genero: ");genero = sc.next().charAt(0);
-		System.out.print("Ingrese su Edad: ");edad = sc.nextInt();
-		System.out.print("Ingrese su Peso: "); peso = sc.nextDouble();
-		System.out.print("Ingrese su Altura: "); altura = sc.nextDouble();
-		
-		Persona p1= new Persona(nombre,edad,genero,peso,altura);
-		System.out.println("Persona: "+ p1);
-		
+        String nombre = in.getString("Ingresa Nombre: ");
+        char genero = in.getGenero("Ingrese su sexo: ");
+        int edad = in.getEdad("Ingresa edad: ");
+        double peso = in.getPeso("Ingrese su Peso: ");
+        double altura = in.getAltura("Ingrese su altura: ");
+        int codigo = in.getEdad("Ingrese su codigo de estudiante: ");
 
-		
-	}
+        Alumno p1= new Alumno(nombre,edad,genero,peso,altura,codigo);
 
+        System.out.println(p1.IMC()+" "+ p1);
+
+    }
 }
