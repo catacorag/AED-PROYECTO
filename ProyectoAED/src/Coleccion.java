@@ -45,3 +45,66 @@ public class Coleccion <T extends Comparable<T>>{
 		}
 		
 	}
+	public Persona[] mayoresDeEdad() {
+		int j=0;	
+		Persona [] arrMayoresDeEdad = new Persona[nropersonas];
+		for (int i=0; i<nropersonas && arrPersona[i]!=null; i++) {
+		       if(arrPersona[i].esMayorDeEdad()) {
+					arrMayoresDeEdad[j]=new Persona(arrPersona[i]);
+					j=j+1;
+				}
+		}
+		return arrMayoresDeEdad;
+	}
+	
+	//
+	Persona [] arrPesoIdeal;
+	Persona [] arrDesnutricion;
+	Persona [] arrSobrepeso;
+	int z=0;
+	int a=0;
+	int v=0;
+	public void condicionDePeso() {
+		for (int i=0; i<nropersonas; i++) {
+			if (arrPersona[i].IMC().equals("Peso Ideal")) {
+					arrPesoIdeal[z]=arrPersona[i];
+					z=z+1;
+					
+			}
+			else if (arrPersona[i].IMC().equals("SobrePeso")) {
+				arrSobrepeso[a]=arrPersona[i];
+				a=a+1;
+				
+			}
+			else if (arrPersona[i].IMC().equals("Bajo Peso")) {
+				arrDesnutricion[v]=arrPersona[i];
+				v=v+1;
+			}
+		}
+		System.out.println("Personas con su peso ideal");
+		System.out.println(arrPesoIdeal);
+		System.out.println("Personas con desnutrición");
+		System.out.println(arrDesnutricion);
+		System.out.println("Personas con sobrepeso");
+		System.out.println(arrSobrepeso);
+	}
+	
+	Persona [] alturaMayor = new Persona [nropersonas];
+	int o=0;
+	public Persona  [] alturaMayor(double alturaingresada) {
+		for (int i=0; i<arrPersona.length; i++) {
+			if (arrPersona[i].getAltura() == alturaingresada) {
+					
+					alturaMayor[o]=arrPersona[i];
+					o=o+1;
+			}
+		}
+		return 	(alturaMayor);
+	}
+	
+	public String toString() {
+		return " Array de las personas: [" + Arrays.toString(arrPersona) + "]";
+	}
+	
+}
+	
