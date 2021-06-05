@@ -6,8 +6,6 @@ public class Alumno extends Persona {
 		this.codigo = codigo;
 
 	}
-
-	private int  codigo;
 	private int codigo;
 
 	public Alumno(int codigo) {
