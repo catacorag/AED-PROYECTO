@@ -21,6 +21,6 @@ public class Ejercicio {
 	}
 	@Override
 	public String toString() {
-		return "Ejercicio [descripcion=" + descripcion + ", nrodehoras=" + nrodehoras + "]";
+		return "Ejercicio [descripcion= " + descripcion + ", nrodehoras=" + nrodehoras + "]";
 	}
 }

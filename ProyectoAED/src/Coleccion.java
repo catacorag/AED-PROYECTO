@@ -4,6 +4,7 @@ public class Coleccion <T extends Comparable<T>>{
 	private Persona arrPersona [];
 	private int ultimo; //n posicion del ultimo elemento
 	private int nropersonas;
+
 	public Coleccion() {
 		this.arrPersona = new Persona [10];
 		this.nropersonas= arrPersona.length;
@@ -94,16 +95,14 @@ public class Coleccion <T extends Comparable<T>>{
 	public Persona  [] alturaMayor(double alturaingresada) {
 		for (int i=0; i<arrPersona.length; i++) {
 			if (arrPersona[i].getAltura() == alturaingresada) {
-					
 					alturaMayor[o]=arrPersona[i];
 					o=o+1;
 			}
 		}
 		return 	(alturaMayor);
 	}
-	
 	public String toString() {
-		return " Array de las personas: [" + Arrays.toString(arrPersona) + "]";
+		return " Array de las recomendaciones: [" + Arrays.toString(arrPersona) + "]";
 	}
 	
 }

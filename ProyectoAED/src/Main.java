@@ -24,10 +24,29 @@ public class Main {
 		
 		Alumno p2 = new Alumno(nombre2,edad2,genero2,peso2,altura2,codigo2);
 		
-		Coleccion c1 = new Coleccion();
-		System.out.println(c1.agregarPersona(p1)+" "+p1.IMC());
-		System.out.println(c1.agregarPersona(p2)+" "+p2.IMC());
-		System.out.println(c1.toString());
+		Coleccion c1 = new Coleccion(2);
+		
+		String descripcion = in.getString("Ingrese la descripcion de la recomendacion :");
+		Recomendacion r1 = new Recomendacion(descripcion);
+		String descripcion2 = in.getString("Ingrese la descripcion de la recomendacion :");
+		Recomendacion r2  =  new Recomendacion(descripcion2);
+		ColeccionRecomendaciones c2 = new ColeccionRecomendaciones(2);
+		
+		System.out.println(c1.agregarPersona(p1));
+		System.out.println(c1.agregarPersona(p2));
+		System.out.println(c2.agregarRecomendacion(r1));
+		System.out.println(c2.agregarRecomendacion(r2));
+
+		
+		if(p1.IMC().equals("Bajo Peso")) {
+			System.out.println( c1.toString() + p1.IMC() + "\n" + r1);
+		}
+		else{
+			if(p1.IMC().equals("Peso Ideal")) {
+				System.out.println(c1.toString()+ p2.IMC()  + "\n" + r2);
+			}
+		}
+
 
 	}
 }

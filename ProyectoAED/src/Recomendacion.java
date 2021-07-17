@@ -7,6 +7,10 @@ public class Recomendacion {
 		this.descripcion = descripcion;
 	}
 
+	public Recomendacion(Recomendacion p) {
+		this(p.descripcion);
+	}
+
 	public String getDescripcion() {
 		return descripcion;
 	}

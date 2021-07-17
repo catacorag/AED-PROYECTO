@@ -16,8 +16,8 @@ public class Persona {
         this.nombre=nombre; 
         this.edad=edad;
         this.sexo=sexo;
-        this.peso=(float) d;
-        this.altura=(float) e;
+        this.peso= d;
+        this.altura= e;
     }
     public Persona(Persona p) {
         this(p.nombre, p.edad, p.sexo, p.peso, p.altura);
